@@ -1,97 +1,4 @@
-class MaxBinaryHeap {
-  constructor() {
-    this.values = [];
-  }
-
-  insert(item) {
-    this.values.push(item);
-
-    let index = this.values.length - 1;
-    const inserted = this.values[index];
-
-    while (index > 0) {
-      let parentIndex = Math.floor((index - 1) / 2);
-      let parent = this.values[parentIndex];
-
-      if (inserted.value <= parent.value) break;
-      this.values[parentIndex] = inserted;
-      this.values[index] = parent;
-      index = parentIndex;
-    }
-    return this.values;
-  }
-
-  // create our extractMax method
-  extractMax() {
-    // store the root as a variable so we can return it at the end
-    const max = this.values[0];
-    // pop off the last value in our array
-    const end = this.values.pop();
-
-    // if the values array is now empty, we do not need to do run the following code and can return the max variable
-    if (this.values.length > 0) {
-      // swap the root as the popped off value
-      this.values[0] = end;
-
-      // start the bubble down effect
-      // store the parent index that we will check
-      let index = 0;
-      // store the length of the array
-      const length = this.values.length;
-      // store the value that we are checking
-      const check = this.values[0];
-
-      // loop while true
-      while (true) {
-        // store the left child index
-        let leftIndex = 2 * index + 1;
-        // store the right child index
-        let rightIndex = 2 * index + 2;
-        // initialize variables for left and right child values
-        let leftChild, rightChild;
-        // keep track if there are any swaps, so we know when to break out of the loop
-        let swap = null;
-
-        // check if there is a left child and set the value of left child
-        if (leftIndex < length) {
-          leftChild = this.values[leftIndex];
-          // check if we should swap the left child
-          if (leftChild.value > check.value) {
-            swap = leftIndex;
-          }
-        }
-        // check if there is a right child and set the value of right child
-        if (rightIndex < length) {
-          rightChild = this.values[rightIndex];
-          // check if we should swap the right child
-          if (
-            // if left child was not swapped and right child is greater than check value
-            (swap === null && rightChild.value > check.value) ||
-            // if left child was swapped, and right child is greater than left child
-            (swap !== null && rightChild.value > leftChild.value)
-          ) {
-            swap = rightIndex;
-          }
-        }
-
-        // if no swaps were done, we will break out of the while loop
-        if (swap === null) break;
-        // else, swap the values at our index and swap
-        this.values[index] = this.values[swap];
-        this.values[swap] = check;
-        // update index to the swap index to check the next level
-        index = swap;
-      }
-    }
-
-    // return the removed root
-    return max;
-  }
-
-  hasValues() {
-    return this.values.length > 0;
-  }
-}
+const { MaxBinaryHeap } = require("./../../binary-heap/binary-heap");
 
 function getLongestIncreasingPath(matrix) {
   const offsetMatrx = [
@@ -196,11 +103,11 @@ function getLongestIncreasingPathV2(matrix) {
 
       if (item.completed) continue;
 
-      const heap = new MaxBinaryHeap();
+      const heap = new MaxBinaryHeap(item => item.value);
       item.touched = true;
-      heap.insert(item);
+      heap.add(item);
 
-      while (heap.hasValues()) {
+      while (heap.size > 0) {
         const maxItem = heap.extractMax();
 
         const neighbors = offsetMatrx
@@ -219,11 +126,11 @@ function getLongestIncreasingPathV2(matrix) {
         });
 
         if (incompleteNeighbors.length) {
-          heap.insert(maxItem);
+          heap.add(maxItem);
           incompleteNeighbors.forEach((neighbor) => {
             if (!neighbor.touched) {
               neighbor.touched = true;
-              heap.insert(neighbor);
+              heap.add(neighbor);
             }
           });
           continue;
