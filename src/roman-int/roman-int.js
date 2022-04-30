@@ -27,7 +27,7 @@ function romanToIntV1(s) {
   }
 
   return sum;
-};
+}
 
 function romanToIntV2(s) {
   const romanIntMap = {
@@ -40,20 +40,17 @@ function romanToIntV2(s) {
     M: 1000,
   };
 
-  return s
-    .split("")
-    .reverse()
-    .reduce(
-      (acc, item) => {
-        const value = romanIntMap[item];
-        return (
-          value < acc.prev ? (acc.sum -= value) : (acc.sum += value),
-          (acc.prev = value),
-          acc
-        );
-      },
-      { sum: 0, prev: 0 }
-    ).sum;
+  return s.split("").reduceRight(
+    (acc, item) => {
+      const value = romanIntMap[item];
+      return (
+        value < acc.prev ? (acc.sum -= value) : (acc.sum += value),
+        (acc.prev = value),
+        acc
+      );
+    },
+    { sum: 0, prev: 0 }
+  ).sum;
 }
 
 exports.romanToIntV1 = romanToIntV1;

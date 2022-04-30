@@ -8,6 +8,13 @@ describe("romanToIntV1", () => {
     expect(output).toEqual(1);
   });
 
+  it("2", () => {
+    const input = "II";
+    const output = romanToIntV1(input);
+
+    expect(output).toEqual(2);
+  });
+
   it("< 10", () => {
     const input = "III";
     const output = romanToIntV1(input);
@@ -22,7 +29,14 @@ describe("romanToIntV1", () => {
     expect(output).toEqual(18);
   });
 
-  it("< 2000", () => {
+  it("1961", () => {
+    const input = "MCMLXI";
+    const output = romanToIntV1(input);
+
+    expect(output).toEqual(1961);
+  });
+
+  it("1994", () => {
     const input = "MCMXCIV";
     const output = romanToIntV1(input);
 
@@ -38,6 +52,13 @@ describe("romanToIntV2", () => {
     expect(output).toEqual(1);
   });
 
+  it("2", () => {
+    const input = "II";
+    const output = romanToIntV2(input);
+
+    expect(output).toEqual(2);
+  });
+
   it("< 10", () => {
     const input = "III";
     const output = romanToIntV2(input);
@@ -52,7 +73,14 @@ describe("romanToIntV2", () => {
     expect(output).toEqual(18);
   });
 
-  it("< 2000", () => {
+  it("1961", () => {
+    const input = "MCMLXI";
+    const output = romanToIntV2(input);
+
+    expect(output).toEqual(1961);
+  });
+
+  it("1994", () => {
     const input = "MCMXCIV";
     const output = romanToIntV2(input);
 
