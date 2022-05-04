@@ -1,15 +1,4 @@
-const { getNumberOfUpgoingPathsV4 } = require("./g-tree-paths");
-
-class Vertex {
-  constructor(weight, parent) {
-    this.weight = weight;
-    this.parent = parent;
-  }
-}
-
-function buildTree(data) {
-  return data.map(([parent, value]) => new Vertex(value, parent));
-}
+const { buildTree, getNumberOfUpgoingPathsV4 } = require("./g-tree-paths");
 
 test("test 1", () => {
   const data = [

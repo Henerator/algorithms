@@ -1,3 +1,14 @@
+class Vertex {
+  constructor(weight, parent) {
+    this.weight = weight;
+    this.parent = parent;
+  }
+}
+
+function buildTree(data) {
+  return data.map(([parent, value]) => new Vertex(value, parent));
+}
+
 // Out of stack
 function getNumberOfUpgoingPaths(tree, x) {
   let count = 0;
@@ -193,6 +204,7 @@ function getNumberOfUpgoingPathsV4(tree, x) {
   return cycleSearch(tree[rootIndex], x);
 }
 
+exports.buildTree = buildTree;
 exports.getNumberOfUpgoingPaths = getNumberOfUpgoingPaths;
 exports.getNumberOfUpgoingPathsV2 = getNumberOfUpgoingPathsV2;
 exports.getNumberOfUpgoingPathsV3 = getNumberOfUpgoingPathsV3;
