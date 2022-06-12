@@ -100,8 +100,6 @@ it('multiple inside another', () => {
   const B = [new Segment(1, 10)];
   const output = getIntersection(A, B);
 
-  console.log(output);
-
   expect(output.length).toEqual(3);
 
   expect(output[0].left).toEqual(1);
