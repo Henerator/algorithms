@@ -92,6 +92,10 @@ class BaseBinaryHeap {
     }
   }
 
+  getRoot() {
+    return this.items[0] || null;
+  }
+
   extractRoot() {
     const size = this.size;
 
@@ -118,6 +122,10 @@ class MaxBinaryHeap extends BaseBinaryHeap {
     });
   }
 
+  getMax() {
+    return this.getRoot();
+  }
+
   extractMax() {
     return this.extractRoot();
   }
@@ -128,6 +136,10 @@ class MinBinaryHeap extends BaseBinaryHeap {
     super(extractValue, (itemA, itemB) => {
       return itemB - itemA;
     });
+  }
+
+  getMin() {
+    return this.getRoot();
   }
 
   extractMin() {
