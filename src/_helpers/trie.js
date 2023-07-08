@@ -23,26 +23,6 @@ class Trie {
       node.wordEnd = true;
     });
   }
-
-  getWordsEndPositions(text, start) {
-    let node = this.root;
-    const positions = [];
-
-    for (let i = start; i < text.length; i++) {
-      const char = text[i];
-      if (!node.children.has(char)) {
-        return positions;
-      }
-
-      node = node.children.get(char);
-
-      if (node.wordEnd) {
-        positions.push(i + 1);
-      }
-    }
-
-    return positions;
-  }
 }
 
 exports.Trie = Trie;
