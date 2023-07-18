@@ -19,14 +19,14 @@ readline.question('File name: ', (name) => {
 function createFolder(name) {
   fs.mkdir(name, (err) => {
     if (err) return console.error(err);
-    console.log(`Directory ${name} created`);
+    console.log(`Created folder ${name}`);
   });
 }
 
 function createFile(folder, name) {
   fs.writeFile(`${folder}/${name}.js`, '', function (err) {
     if (err) return console.error(err);
-    console.log(`File ${folder}/${name}.js created`);
+    console.log(`Created file ${folder}/${name}.js`);
   });
 }
 
@@ -42,6 +42,6 @@ function createSpecFile(folder, name) {
 
   fs.writeFile(`${folder}/${name}.spec.js`, content, function (err) {
     if (err) throw err;
-    console.log(`File ${folder}/${name}.spec.js created`);
+    console.log(`Created file ${folder}/${name}.spec.js`);
   });
 }
