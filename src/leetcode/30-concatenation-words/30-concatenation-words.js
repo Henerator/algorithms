@@ -18,19 +18,34 @@ function findSubstring(s, words) {
   }
 
   const leftLimit = s.length - allWordsLength;
+  const cache = new Map();
 
   for (let left = 0; left <= leftLimit; left++) {
-    let seenWordsMap = new Map();
+    let seenWords = { map: new Map(), count: 0 };
+    let rightStart = left + wordLength;
 
-    for (let right = left + wordLength; right <= s.length; right += wordLength) {
+    const cachedSeenWords = cache.get(left - wordLength);
+    if (cachedSeenWords && cachedSeenWords.count > 0) {
+      const firstCacheWord = s.substring(left - wordLength, left);
+      cachedSeenWords.map.set(firstCacheWord, cachedSeenWords.map.get(firstCacheWord) - 1);
+      cachedSeenWords.count--;
+      seenWords = cachedSeenWords;
+      rightStart += cachedSeenWords.count * wordLength;
+    }
+
+    cache.set(left, seenWords);
+
+    for (let right = rightStart; right <= s.length; right += wordLength) {
       const word = s.substring(right - wordLength, right);
 
       if (!wordsMap.has(word)) break;
 
-      if (!seenWordsMap.has(word)) seenWordsMap.set(word, 0);
-      seenWordsMap.set(word, seenWordsMap.get(word) + 1);
+      if (!seenWords.map.has(word)) seenWords.map.set(word, 0);
 
-      if (seenWordsMap.get(word) > wordsMap.get(word)) break;
+      if (seenWords.map.get(word) === wordsMap.get(word)) break;
+
+      seenWords.map.set(word, seenWords.map.get(word) + 1);
+      seenWords.count++;
 
       if (right - left === allWordsLength) {
         positions.push(left);
