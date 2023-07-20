@@ -34,6 +34,7 @@ function findSubstring(s, words) {
     }
 
     cache.set(left, seenWords);
+    cache.delete(left - wordLength);
 
     for (let right = rightStart; right <= s.length; right += wordLength) {
       const word = s.substring(right - wordLength, right);
