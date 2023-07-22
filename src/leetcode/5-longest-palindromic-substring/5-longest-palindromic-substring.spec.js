@@ -1,4 +1,4 @@
-const { longestPalindrome } = require('./4-longest-palindromic-substring');
+const { longestPalindrome } = require('./5-longest-palindromic-substring');
 
 it('odd palindrome at the beginning', () => {
   const input = 'babad';
