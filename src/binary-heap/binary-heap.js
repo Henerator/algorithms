@@ -33,10 +33,7 @@ class BaseBinaryHeap {
     let index = this.size - 1;
     let parentIndex = this.getParentIndex(index);
 
-    while (
-      index > 0 &&
-      this.compareValues(this.getValue(parentIndex), this.getValue(index)) < 0
-    ) {
+    while (index > 0 && this.compareValues(this.getValue(parentIndex), this.getValue(index)) < 0) {
       this.swap(index, parentIndex);
       index = parentIndex;
       parentIndex = this.getParentIndex(index);
@@ -54,22 +51,13 @@ class BaseBinaryHeap {
       rightChildIndex = index * 2 + 2;
       largestIndex = index;
 
-      if (
-        leftChildIndex < size &&
-        this.compareValues(
-          this.getValue(leftChildIndex),
-          this.getValue(largestIndex)
-        ) > 0
-      ) {
+      if (leftChildIndex < size && this.compareValues(this.getValue(leftChildIndex), this.getValue(largestIndex)) > 0) {
         largestIndex = leftChildIndex;
       }
 
       if (
         rightChildIndex < size &&
-        this.compareValues(
-          this.getValue(rightChildIndex),
-          this.getValue(largestIndex)
-        ) > 0
+        this.compareValues(this.getValue(rightChildIndex), this.getValue(largestIndex)) > 0
       ) {
         largestIndex = rightChildIndex;
       }
@@ -117,8 +105,8 @@ class BaseBinaryHeap {
 
 class MaxBinaryHeap extends BaseBinaryHeap {
   constructor(extractValue) {
-    super(extractValue, (itemA, itemB) => {
-      return itemA - itemB;
+    super(extractValue, (valueA, valueB) => {
+      return valueA - valueB;
     });
   }
 
@@ -133,8 +121,8 @@ class MaxBinaryHeap extends BaseBinaryHeap {
 
 class MinBinaryHeap extends BaseBinaryHeap {
   constructor(extractValue) {
-    super(extractValue, (itemA, itemB) => {
-      return itemB - itemA;
+    super(extractValue, (valueA, valueB) => {
+      return valueB - valueA;
     });
   }
 

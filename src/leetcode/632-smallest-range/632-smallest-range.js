@@ -1,4 +1,4 @@
-class BaseHeap {
+class BaseBinaryHeap {
   constructor(extractValue, compareValues) {
     this.items = [];
     this.extractValue = extractValue;
@@ -90,7 +90,7 @@ class BaseHeap {
   }
 }
 
-class MinHeap extends BaseHeap {
+class MinBinaryHeap extends BaseBinaryHeap {
   constructor(extractValue) {
     super(extractValue, (itemA, itemB) => itemB - itemA);
   }
@@ -109,7 +109,7 @@ class MinHeap extends BaseHeap {
  * @return {number[]}
  */
 function smallestRange(nums) {
-  const heap = new MinHeap((item) => item.value);
+  const heap = new MinBinaryHeap((item) => item.value);
   const count = nums.length;
 
   const range = { min: Infinity, max: -Infinity };
