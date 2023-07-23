@@ -91,7 +91,7 @@ class MinBinaryHeap extends BaseBinaryHeap {
  * @param {number[]} nums
  * @return {number}
  */
-function findScoreV2(nums) {
+function findScore(nums) {
   let score = 0;
 
   const markedIndices = new Set();
@@ -113,4 +113,4 @@ function findScoreV2(nums) {
   return score;
 }
 
-exports.findScoreV2 = findScoreV2;
+exports.findScore = findScore;
