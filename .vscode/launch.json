@@ -8,10 +8,8 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}\\src\\leetcode\\676-magic-dictionary\\676-magic-dictionary.js"
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${relativeFile}"
     }
   ]
 }
