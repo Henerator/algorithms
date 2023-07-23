@@ -5,24 +5,33 @@
  * @return {number}
  */
 function getKth(start, end, k) {
-  const cache = new Map();
+  const cacheValue = new Map();
+  const cachePower = new Map();
 
   function getNextValue(value) {
-    if (cache.has(value)) return cache.get(value);
+    if (cacheValue.has(value)) return cacheValue.get(value);
 
     const nextValue = value % 2 === 0 ? value >> 1 : 3 * value + 1;
-    cache.set(value, nextValue);
+    cacheValue.set(value, nextValue);
     return nextValue;
   }
 
   function getPower(value) {
-    let power = 0;
+    if (cachePower.has(value)) return cachePower.get(value);
 
-    while (value !== 1) {
+    let power = 0;
+    let nextValue = value;
+
+    while (nextValue !== 1) {
       power++;
-      value = getNextValue(value);
+      nextValue = getNextValue(nextValue);
+
+      if (cachePower.has(nextValue)) {
+        return power + cachePower.get(nextValue);
+      }
     }
 
+    cachePower.set(value, power);
     return power;
   }
 
@@ -30,6 +39,8 @@ function getKth(start, end, k) {
   for (let index = start; index <= end; index++) {
     arr.push({ value: index, power: getPower(index) });
   }
+
+  console.log(arr);
 
   return arr.sort((itemA, itemB) => {
     return itemA.power === itemB.power ? itemA.index - itemB.index : itemA.power - itemB.power;
