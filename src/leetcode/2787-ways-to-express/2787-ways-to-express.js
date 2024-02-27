@@ -1,4 +1,5 @@
 /**
+ * [Recursion]
  * @param {number} n
  * @param {number} x
  * @return {number}
