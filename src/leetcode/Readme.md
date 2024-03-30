@@ -1,5 +1,19 @@
 # Leetcode
 
+## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
+
+[Solution](./26-remove-duplicates/26-remove-duplicates.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- use two pointers
+  - left one searching for duplicates
+  - right one searching for next non duplicate value
+
 ## [27. Remove element](https://leetcode.com/problems/remove-element/description)
 
 [Solution](./27-remove-lement/27-remove-lement.js)
