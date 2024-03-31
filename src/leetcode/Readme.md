@@ -28,6 +28,20 @@
   - left one searching for matches
   - right one searching for place to move the match
 
+## [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description)
+
+[Solution](./80-remove-duplicates/80-remove-duplicates.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- use two pointers
+  - left one keeping place to put next item
+  - right one searching for next non duplicate value
+
 ## [88. Merge sorted array](https://leetcode.com/problems/merge-sorted-array/description)
 
 [Solution](./88-merge-sorted-array/88-merge-sorted-array.js)
