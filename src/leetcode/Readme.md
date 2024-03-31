@@ -86,3 +86,17 @@
 
 - use hash table to save count of each value
 - get max count
+
+## [189. Rotate Array](https://leetcode.com/problems/rotate-array/description)
+
+[Solution](./189-rotate-array/189-rotate-array.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- one pointer at current index
+- second at next position
+- apply for 1..k indexes to handle circles
