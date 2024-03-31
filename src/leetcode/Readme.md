@@ -63,3 +63,26 @@
 - update pointers
   - move current
   - move one of max pointers
+
+## [169. Majority Element](https://leetcode.com/problems/majority-element/description)
+
+[Solution](./169-majority-element/169-majority-element.js)
+
+### Topics
+
+> sorting
+
+> hash-table
+
+### Notes
+
+#### Sorting
+
+- sort nums
+- get middle element
+  - element appears more than ⌊n / 2⌋
+
+#### Hash table
+
+- use hash table to save count of each value
+- get max count
