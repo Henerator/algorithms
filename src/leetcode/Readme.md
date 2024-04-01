@@ -100,3 +100,21 @@
 - one pointer at current index
 - second at next position
 - apply for 1..k indexes to handle circles
+
+## [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description)
+
+[Solution](./121-best-time/121-best-time.js)
+
+### Topics
+
+> two-pointers
+
+> sliding-window
+
+### Notes
+
+- left pointer keeps min value for the current window
+- right pointer looking for the max value in current window
+- save max profit
+  - update on every new window
+- move left pointer if next min found
