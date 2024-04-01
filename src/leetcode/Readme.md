@@ -28,6 +28,34 @@
   - left one searching for matches
   - right one searching for place to move the match
 
+## [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/description)
+
+[Solution](./45-jump-game-2/45-jump-game-2.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- one pointer keeps the max index that we can jump from current position
+- second pointer keeps previous max jump index
+- third pointer run from the start searching max jumps to update first pointer
+
+## [55. Jump Game](https://leetcode.com/problems/jump-game/description)
+
+[Solution](./55-jump-game/55-jump-game.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- one pointer keeps current reachable index
+- second pointer goes to the array's start search for the place index is reachable from
+- update reachable index with second pointer value once it's founded
+
 ## [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description)
 
 [Solution](./80-remove-duplicates/80-remove-duplicates.js)
