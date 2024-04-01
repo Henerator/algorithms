@@ -118,3 +118,19 @@
 - save max profit
   - update on every new window
 - move left pointer if next min found
+
+## [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description)
+
+[Solution](./122-best-time-2/122-best-time-2.js)
+
+### Topics
+
+> two-pointers
+
+> sliding-window
+
+### Notes
+
+- just sum all positive changes between 2 days
+  - for [1, 2, 3, 4] `(2-1) + (3-2) + (4-3)` = `(4-1)`
+- ignore negative changes
