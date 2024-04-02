@@ -162,3 +162,34 @@
 - just sum all positive changes between 2 days
   - for [1, 2, 3, 4] `(2-1) + (3-2) + (4-3)` = `(4-1)`
 - ignore negative changes
+
+## [274. H-Index](https://leetcode.com/problems/h-index/description)
+
+[Solution](./274-h-index/274-h-index.js)
+
+### Topics
+
+> sorting
+
+> binary-search
+
+### Notes
+
+- sort array
+- find min index where `count - i >= nums[i + 1]`
+  - use linear search of binary search
+
+## [275. H-Index II](https://leetcode.com/problems/h-index-ii/description)
+
+[Solution](./275-h-index-2/275-h-index-2.js)
+
+### Topics
+
+> binary-search
+
+### Notes
+
+- see [274. H-Index](#274-h-index)
+- array already sorted
+- find min index where `count - i >= nums[i + 1]`
+  - use binary search
