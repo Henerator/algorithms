@@ -163,6 +163,22 @@
   - for [1, 2, 3, 4] `(2-1) + (3-2) + (4-3)` = `(4-1)`
 - ignore negative changes
 
+## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
+
+[Solution](./238-product/238-product.js)
+
+### Topics
+
+> prefix
+
+> suffix
+
+### Notes
+
+- calculate prefix product for every index
+- calculate suffix product for every index
+- map array multiplying prefix and suffix for every index
+
 ## [274. H-Index](https://leetcode.com/problems/h-index/description)
 
 [Solution](./274-h-index/274-h-index.js)
