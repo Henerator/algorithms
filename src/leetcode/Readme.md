@@ -193,3 +193,21 @@
 - array already sorted
 - find min index where `count - i >= nums[i + 1]`
   - use binary search
+
+## [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description)
+
+[Solution](./380-randomized-set/380-randomized-set.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- create array for values to be able to get random one
+- create map to bind value to it's index in array
+- remove
+  - put last value into removed value place
+  - update last value index in the map
+  - remove value index binding from the map
+  - remove last element from the array
