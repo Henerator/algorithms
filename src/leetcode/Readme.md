@@ -163,6 +163,27 @@
   - for [1, 2, 3, 4] `(2-1) + (3-2) + (4-3)` = `(4-1)`
 - ignore negative changes
 
+## [134. Gas Station](https://leetcode.com/problems/gas-station/description)
+
+[Solution](./134-gas-station/134-gas-station.js)
+
+### Topics
+
+> greedy
+
+### Notes
+
+- check if solution exist
+  - sum all gas
+  - sum all costs
+  - gas sum should be >= cost sum
+- find start index
+  - set it to 0
+  - sum current gas on each step
+  - if current gas < 0
+    - move startIndex to `index + 1`
+    - reset current gas sum
+
 ## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
 
 [Solution](./238-product/238-product.js)
