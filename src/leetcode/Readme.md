@@ -184,6 +184,23 @@
     - move startIndex to `index + 1`
     - reset current gas sum
 
+## [135. Candy](https://leetcode.com/problems/candy/description)
+
+[Solution](./135-candy/135-candy.js)
+
+### Topics
+
+> greedy
+
+### Notes
+
+- find all value increases from left to right
+  - increase value by 1 for each case
+- find all value increases from right to left
+  - increase value by 1 for each case
+- get `max(left, right)` for each index
+- sum all the maximums
+
 ## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
 
 [Solution](./238-product/238-product.js)
