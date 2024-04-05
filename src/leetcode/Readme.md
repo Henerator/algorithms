@@ -28,6 +28,20 @@
   - left one searching for matches
   - right one searching for place to move the match
 
+## [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description)
+
+[Solution](./42-trapping-water/42-trapping-water.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- use two pointers
+  - move pointer with min or equal value forward summing water
+  - keep current min wall value to calculate water on each step
+
 ## [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/description)
 
 [Solution](./45-jump-game-2/45-jump-game-2.js)
