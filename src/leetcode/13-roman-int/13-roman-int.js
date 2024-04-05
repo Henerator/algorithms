@@ -9,7 +9,7 @@ function romanToIntV1(s) {
     M: 1000,
   };
 
-  const romanDigits = s.split("");
+  const romanDigits = s.split('');
   let sum = 0;
   let prevIntValue = 0;
 
@@ -40,14 +40,10 @@ function romanToIntV2(s) {
     M: 1000,
   };
 
-  return s.split("").reduceRight(
+  return s.split('').reduceRight(
     (acc, item) => {
       const value = romanIntMap[item];
-      return (
-        value < acc.prev ? (acc.sum -= value) : (acc.sum += value),
-        (acc.prev = value),
-        acc
-      );
+      return value < acc.prev ? (acc.sum -= value) : (acc.sum += value), (acc.prev = value), acc;
     },
     { sum: 0, prev: 0 }
   ).sum;

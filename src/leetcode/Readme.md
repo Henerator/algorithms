@@ -1,5 +1,21 @@
 # Leetcode
 
+## [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/description)
+
+[Solution](./13-roman-int/13-roman-int.js)
+
+### Topics
+
+> math
+
+### Notes
+
+- go from the right to the left through roman value
+  - if the value < previos one subtract it from the sum
+  - if the value > previos one add it to the sum
+- nice JS point
+  - `return op1, op2, value` will execute op1, op2 and return value
+
 ## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
 
 [Solution](./26-remove-duplicates/26-remove-duplicates.js)
