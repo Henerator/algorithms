@@ -37,6 +37,19 @@
 - nice JS point
   - `return op1, op2, value` will execute op1, op2 and return value
 
+## [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description)
+
+[Solution](./14-longest-prefix/14-longest-prefix.js)
+
+### Topics
+
+> string
+
+### Notes
+
+- find the max word in the list
+- go by each char in the word and compare this to every word in the list
+
 ## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
 
 [Solution](./26-remove-duplicates/26-remove-duplicates.js)
