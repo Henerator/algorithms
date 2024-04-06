@@ -52,11 +52,23 @@
 
 > two-pointers
 
+> dp
+
 ### Notes
 
-- use two pointers
-  - move pointer with min or equal value forward summing water
-  - keep current min wall value to calculate water on each step
+### Two pointers
+
+- move pointer with min or equal value forward summing water
+- keep current min wall value to calculate water on each step
+
+### Dynamic programming
+
+- calculate maxLeft for each cell
+  - [0, 0, 1, 1, 2, 3, 3]
+- calculate maxRught for each cell
+  - [3, 3, 3, 3, 2, 2, 0]
+- calculate `min(L, R)` for each cell
+- calculate `min(L, R) - heights[i]` for each cell
 
 ## [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/description)
 
