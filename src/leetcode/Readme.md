@@ -1,5 +1,26 @@
 # Leetcode
 
+## [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman/description)
+
+[Solution](./12-int-to-roman/12-int-to-roman.js)
+
+### Topics
+
+> math
+
+> hash-table
+
+### Notes
+
+- go from left to right by digits in number
+- convert to appropriate string
+  - consider cases
+    - <= 3
+    - == 4
+    - <= 8
+    - == 9
+    - otherwise ''
+
 ## [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/description)
 
 [Solution](./13-roman-int/13-roman-int.js)
