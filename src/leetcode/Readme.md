@@ -65,6 +65,69 @@
 - find the max word in the list
 - go by each char in the word and compare this to every word in the list
 
+## [15. 3Sum](https://leetcode.com/problems/3sum/description)
+
+[Solution](./15-3sum/15-3sum.js)
+
+### Topics
+
+> two-pointers
+
+> hash-table
+
+### Notes
+
+#### Two pointers
+
+- handle edge case
+  - if nums count < 3 -> no triples
+- sort array
+- handle edge case
+  - `nums[0] > 0` -> no triples that give in sum `0`
+- fix one pointer at the start of array
+  - handle edge case
+  - `nums[i] > 0` -> no triples that give in sum `0`
+- set two pointers
+  - `left = i + 1`
+  - `right = arr.length - 1`
+- calculate sum `nums[i] + nums[left] + nums[right]`
+  - if `sum === 0`
+    - push new triple to the answer
+    - move left pointer
+      - move until new left value to avoid duplicates
+    - move right pointer
+      - move until new right value to avoid duplicates
+  - if `sum < 0`
+    - move left pointer since we need to increase the sum
+  - if `sum > 0`
+    - move right pointer since we need to dencrease the sum
+
+#### Hash table
+
+- handle edge case
+  - if nums count < 3 -> no triples
+- sort array
+- handle edge case
+  - `nums[0] > 0` -> no triples that give in sum `0`
+- put in hash map every value
+  - `hashMap.add(nums[i], i)`
+  - this step will set the last index for repeated values
+    - `[1, 1, 1, 2, 2, 2]` -> `[[value: 1, index: 2], [value: 2, index: 5]]`
+- fix one pointer at the start of array
+  - handle edge case
+  - `nums[i] > 0` -> no triples that give in sum `0`
+- set second pointers
+  - `left = i + 1`
+  - loop to the end of array
+    - calculate third value that you need to get zero
+      - `nums[i] + nums[left] + value = 0` -> `value = -1 * (nums[i] + nums[left])`
+    - check if third value in hashMap
+      - check if index of value is not equal to left pointer to avoid duplicates
+        - `hashMap.get(value) > left`
+    - update second pointer
+      - get next left from hashMap
+        - pay attention that hashMap will help to skip the same values
+
 ## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
 
 [Solution](./26-remove-duplicates/26-remove-duplicates.js)
