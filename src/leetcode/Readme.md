@@ -239,6 +239,19 @@
   - for [1, 2, 3, 4] `(2-1) + (3-2) + (4-3)` = `(4-1)`
 - ignore negative changes
 
+## [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description)
+
+[Solution](./125-valid-palindrome/125-valid-palindrome.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- move to pointers from different side of the string
+- ignore invalida chars
+
 ## [134. Gas Station](https://leetcode.com/problems/gas-station/description)
 
 [Solution](./134-gas-station/134-gas-station.js)
