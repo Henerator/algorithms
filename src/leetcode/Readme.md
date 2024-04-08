@@ -384,6 +384,26 @@
 - check `numbers[left] + numbers[right] === target`
 - if solution not found repeat until `left < right`
 
+## [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description)
+
+[Solution](./209-min-size-subarray/209-min-size-subarray.js)
+
+### Topics
+
+> sliding-window
+
+> two-pointers
+
+### Notes
+
+- set two pointers to that start of array
+  - `left = 0`
+  - `right = 0`
+- move right pointer until `sum <= target`
+- when `sum > target`
+  - update min window size
+  - move left pointer until `sum < target`
+
 ## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
 
 [Solution](./238-product/238-product.js)
