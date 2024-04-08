@@ -290,6 +290,22 @@
 - get `max(left, right)` for each index
 - sum all the maximums
 
+## [167. Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description)
+
+[Solution](./167-two-sum-2/167-two-sum-2.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- set two pointers to the first and last elements
+- move right pointer `numbers[left] + numbers[right] > target`
+- move left pointer `numbers[left] + numbers[right] < target`
+- check `numbers[left] + numbers[right] === target`
+- if solution not found repeat until `left < right`
+
 ## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
 
 [Solution](./238-product/238-product.js)
