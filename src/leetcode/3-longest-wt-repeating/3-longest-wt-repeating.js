@@ -13,7 +13,7 @@ var lengthOfLongestSubstring = function (s) {
     const charIndex = map.get(char);
     map.set(char, i);
 
-    if (map.has(char) && charIndex >= left) {
+    if (charIndex >= left) {
       currentLength = i - charIndex;
       left = charIndex + 1;
       continue;

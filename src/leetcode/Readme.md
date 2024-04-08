@@ -1,5 +1,25 @@
 # Leetcode
 
+## [3. Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/description)
+
+[Solution](./3-longest-wt-repeating/3-longest-wt-repeating.js)
+
+### Topics
+
+> two-pointers
+
+> sliding-window
+
+### Notes
+
+- go through each symbol
+  - update max window size on each step
+  - update current window size on each step
+  - check if symbol is already in the hash map
+    - update current window size
+    - move left pointer
+      - `left = map.get(char) + 1`
+
 ## [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/description)
 
 [Solution](./11-most-water/11-most-water.js)
