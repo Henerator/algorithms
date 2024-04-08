@@ -354,3 +354,17 @@
   - update last value index in the map
   - remove value index binding from the map
   - remove last element from the array
+
+## [392. Is Subsequence](https://leetcode.com/problems/is-subsequence/description)
+
+[Solution](./392-is-subsequence/392-is-subsequence.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- first pointer goes through each symbol of text
+- second one through the template
+  - template pointer is moved once the same char is found in text
