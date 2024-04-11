@@ -176,6 +176,26 @@
   - left one searching for matches
   - right one searching for place to move the match
 
+## [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description)
+
+[Solution](./36-valid-sudoku/36-valid-sudoku.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- use one hash table for cols, rows and squares values
+  - knowing x and y you can identify row, col and square to set the value
+    - `row = y`
+    - `col = x`
+    - `squareRow = Math.floor(y / 3)`, `squareCol = Math.floor(x / 3)`
+  - generate special hash table key for every case
+    - rows
+    - columns
+    - squares
+
 ## [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description)
 
 [Solution](./42-trapping-water/42-trapping-water.js)
