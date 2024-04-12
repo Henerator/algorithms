@@ -491,6 +491,26 @@
 - find min index where `count - i >= nums[i + 1]`
   - use binary search
 
+## [289. Game of Life](https://leetcode.com/problems/game-of-life/description)
+
+[Solution](./289-game-of-life/289-game-of-life.js)
+
+### Topics
+
+> matrix
+
+> in-place
+
+### Notes
+
+- to solve it in place use the same matrix with value encoding
+  - 0 - was dead will dead
+  - 1 - was alive will dead
+  - 2 - was dead will alive
+  - 3 - was alive will alive
+- calculate encoded value for each cell
+- udpate each cell according to the value
+
 ## [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description)
 
 [Solution](./380-randomized-set/380-randomized-set.js)
