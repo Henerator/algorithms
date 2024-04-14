@@ -444,6 +444,21 @@
   - update min window size
   - move left pointer until `sum < target`
 
+## [228. Summary Ranges](https://leetcode.com/problems/summary-ranges/description)
+
+[Solution](./228-ranges/228-ranges.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- use two pointers
+  - first one keep the start of range
+  - second one goes one by one searching for range end
+- to make it ease push Infinity to the array so you don't need to handle edge case on the end of the array
+
 ## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
 
 [Solution](./238-product/238-product.js)
