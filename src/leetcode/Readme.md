@@ -236,6 +236,23 @@
 - second pointer keeps previous max jump index
 - third pointer run from the start searching max jumps to update first pointer
 
+## [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/description)
+
+[Solution](./56-merge-intervals/56-merge-intervals.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- use two pointers
+  - first one keep the start of range
+  - second one goes one by one searching for range end
+- keep max end to handle cases with nested intervals
+  - `[1, 10], [2, 3], [4, 5]`
+- to make it ease push `[Infinity, Infinity]` to the array so you don't need to handle edge case on the end of the array
+
 ## [55. Jump Game](https://leetcode.com/problems/jump-game/description)
 
 [Solution](./55-jump-game/55-jump-game.js)
