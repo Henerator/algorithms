@@ -253,6 +253,31 @@
   - `[1, 10], [2, 3], [4, 5]`
 - to make it ease push `[Infinity, Infinity]` to the array so you don't need to handle edge case on the end of the array
 
+## [57. Insert Interval](https://leetcode.com/problems/insert-interval/description)
+
+[Solution](./57-insert-interval/57-insert-interval.js)
+
+### Topics
+
+> binary-search
+
+### Notes
+
+- use binary search to find the start insert point for new interval
+- use binary search to find the end insert point for new interval
+- handle start insert case
+  - if new interval overlaps startIndex interval takes min start point
+    - `Math.min(newInterval.start, startIndexInverval.start)`
+  - otherwise increase startIndex
+- handle end insert case
+  - if new interval overlaps endIndex interval takes max end point
+    - `Math.max(newInterval.end, startIndexInverval.end)`
+    - increase endIndex
+- combine result
+  - add intervals to the startIndex
+  - add newInterval using min and max from previous steps
+  - add intervals from endIndex
+
 ## [55. Jump Game](https://leetcode.com/problems/jump-game/description)
 
 [Solution](./55-jump-game/55-jump-game.js)

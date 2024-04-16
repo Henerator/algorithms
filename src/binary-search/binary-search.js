@@ -2,7 +2,7 @@ function binarySearch(arr, predicate) {
   function recursiveSearch(left, right) {
     if (left > right) return -1;
 
-    const middle = Math.floor((left + right) / 2);
+    const middle = left + Math.floor((left + right) / 2);
     const midCondition = predicate(arr[middle]);
 
     if (midCondition === 0) {
