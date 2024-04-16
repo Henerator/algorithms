@@ -328,43 +328,6 @@
   - move current
   - move one of max pointers
 
-## [169. Majority Element](https://leetcode.com/problems/majority-element/description)
-
-[Solution](./169-majority-element/169-majority-element.js)
-
-### Topics
-
-> sorting
-
-> hash-table
-
-### Notes
-
-#### Sorting
-
-- sort nums
-- get middle element
-  - element appears more than ⌊n / 2⌋
-
-#### Hash table
-
-- use hash table to save count of each value
-- get max count
-
-## [189. Rotate Array](https://leetcode.com/problems/rotate-array/description)
-
-[Solution](./189-rotate-array/189-rotate-array.js)
-
-### Topics
-
-> two-pointers
-
-### Notes
-
-- one pointer at current index
-- second at next position
-- apply for 1..k indexes to handle circles
-
 ## [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description)
 
 [Solution](./121-best-time/121-best-time.js)
@@ -465,6 +428,57 @@
 - move left pointer `numbers[left] + numbers[right] < target`
 - check `numbers[left] + numbers[right] === target`
 - if solution not found repeat until `left < right`
+
+## [169. Majority Element](https://leetcode.com/problems/majority-element/description)
+
+[Solution](./169-majority-element/169-majority-element.js)
+
+### Topics
+
+> sorting
+
+> hash-table
+
+### Notes
+
+#### Sorting
+
+- sort nums
+- get middle element
+  - element appears more than ⌊n / 2⌋
+
+#### Hash table
+
+- use hash table to save count of each value
+- get max count
+
+## [189. Rotate Array](https://leetcode.com/problems/rotate-array/description)
+
+[Solution](./189-rotate-array/189-rotate-array.js)
+
+### Topics
+
+> two-pointers
+
+### Notes
+
+- one pointer at current index
+- second at next position
+- apply for 1..k indexes to handle circles
+
+## [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/description)
+
+[Solution](./205-isomorphic/205-isomorphic.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- encode every char with new value for the first string
+- repeat for the second string
+- compare encoded values
 
 ## [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description)
 
