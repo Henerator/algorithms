@@ -528,6 +528,23 @@
   - update min window size
   - move left pointer until `sum < target`
 
+## [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description)
+
+[Solution](./219-contains-uplicate/219-contains-uplicate.js)
+
+### Topics
+
+> sliding-window
+
+> hash-table
+
+### Notes
+
+- go through the array
+  - check if value already in the map
+  - check `i-j <=k ` condition
+  - add value to the map
+
 ## [228. Summary Ranges](https://leetcode.com/problems/summary-ranges/description)
 
 [Solution](./228-ranges/228-ranges.js)
