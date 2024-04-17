@@ -390,6 +390,24 @@
 - move to pointers from different side of the string
 - ignore invalida chars
 
+## [128. Longest Consequtive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description)
+
+[Solution](./128-longest-sequence/128-longest-sequence.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- add all values to the hash set
+- go through the values
+  - check if the value is the first in sequence
+    - check if `value - 1` is in set
+  - if the value is the first go through the values `value + 1`, `value + 2`, ... and check if they are in the set
+    - udpate current longest sequence
+    - update max longest sequence
+
 ## [134. Gas Station](https://leetcode.com/problems/gas-station/description)
 
 [Solution](./134-gas-station/134-gas-station.js)
