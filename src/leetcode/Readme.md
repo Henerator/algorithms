@@ -481,6 +481,19 @@
 - second at next position
 - apply for 1..k indexes to handle circles
 
+## [202. Happy Number](https://leetcode.com/problems/happy-number/description)
+
+[Solution](./202-happy-number/202-happy-number.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- according to the description there is either loop either 1
+- save every next sum into set and check if this value already been before
+
 ## [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/description)
 
 [Solution](./205-isomorphic/205-isomorphic.js)
