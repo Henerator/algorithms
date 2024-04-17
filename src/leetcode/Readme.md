@@ -531,6 +531,21 @@
 - calculate suffix product for every index
 - map array multiplying prefix and suffix for every index
 
+## [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description)
+
+[Solution](./242-valid-anagram/242-valid-anagram.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- check edge case
+  - length of s should be equal to length of t
+- create chars map for s string
+- check if t has the same chars map
+
 ## [274. H-Index](https://leetcode.com/problems/h-index/description)
 
 [Solution](./274-h-index/274-h-index.js)
