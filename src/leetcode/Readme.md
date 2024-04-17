@@ -236,6 +236,21 @@
 - second pointer keeps previous max jump index
 - third pointer run from the start searching max jumps to update first pointer
 
+## [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description)
+
+[Solution](./49-group-anagrams/49-group-anagrams.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- go word by word
+  - sort word's chars to get work hash key
+  - add word to the groups
+  - save group index for the word in map
+
 ## [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/description)
 
 [Solution](./56-merge-intervals/56-merge-intervals.js)
