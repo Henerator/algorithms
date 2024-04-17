@@ -582,6 +582,20 @@
 - calculate encoded value for each cell
 - udpate each cell according to the value
 
+## [290. Word Pattern](https://leetcode.com/problems/word-pattern/description)
+
+[Solution](./290-word-pattern/290-word-pattern.js)
+
+### Topics
+
+> hash-table
+
+### Notes
+
+- use map to save char used for word
+- use set to save used chars
+- if word not in the map but char already used return false
+
 ## [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description)
 
 [Solution](./380-randomized-set/380-randomized-set.js)
