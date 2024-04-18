@@ -476,6 +476,24 @@
 - get `max(left, right)` for each index
 - sum all the maximums
 
+## [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/description)
+
+[Solution](./150-polish-notation/150-polish-notation.js)
+
+### Topics
+
+> stack
+
+### Notes
+
+- if number push to stack
+- if operator
+  - get right operand from top of stack
+  - get left operand from top of stack
+  - calculate operation
+    - pay attention to division: truncate the result
+  - push result to the stack
+
 ## [155. Min Stack](https://leetcode.com/problems/min-stack/description)
 
 [Solution](./155-min-stack/155-min-stack.js)
