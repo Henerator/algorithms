@@ -632,6 +632,24 @@
   - check `i-j <=k ` condition
   - add value to the map
 
+## [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/description)
+
+[Solution](./224-basic-calc/224-basic-calc.js)
+
+### Topics
+
+> stack
+
+### Notes
+
+- save current sign in stack on every `(` char
+- pop sign from stack on every `)` char
+- read numbers by digit
+  - `value = value * 10 + digit`
+- add to result current value multiplied by current sign on every `+` or `-` char
+- update current sign on every `+` or `-`
+  - `currentSign = (char === '+' ? 1 : -1) * sings.last`
+
 ## [228. Summary Ranges](https://leetcode.com/problems/summary-ranges/description)
 
 [Solution](./228-ranges/228-ranges.js)
