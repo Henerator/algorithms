@@ -148,6 +148,20 @@
       - get next left from hashMap
         - pay attention that hashMap will help to skip the same values
 
+## [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description)
+
+[Solution](./20-valid-parentheses/20-valid-parentheses.js)
+
+### Topics
+
+> stack
+
+### Notes
+
+- add open bracket to the stack
+- for close bracket
+  - check if paired open bracket on the top of the stack
+
 ## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
 
 [Solution](./26-remove-duplicates/26-remove-duplicates.js)
