@@ -476,6 +476,27 @@
 - get `max(left, right)` for each index
 - sum all the maximums
 
+## [155. Min Stack](https://leetcode.com/problems/min-stack/description)
+
+[Solution](./155-min-stack/155-min-stack.js)
+
+### Topics
+
+> stack
+
+### Notes
+
+- create stacks
+  - for values
+  - for min values on each push action moment
+- push
+  - add `value` to the values stack
+  - add `Math.min(value, current_step_min)` to the mins stack
+- pop
+  - remove top value from values stack
+  - remove top value from mins stack
+    - note that min value for previous push action now on the top of the stack
+
 ## [167. Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description)
 
 [Solution](./167-two-sum-2/167-two-sum-2.js)
