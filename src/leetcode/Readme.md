@@ -321,6 +321,22 @@
 - second pointer goes to the array's start search for the place index is reachable from
 - update reachable index with second pointer value once it's founded
 
+## [71. Simplify Path](https://leetcode.com/problems/simplify-path/description)
+
+[Solution](./71-simplify-path/71-simplify-path.js)
+
+### Topics
+
+> stack
+
+### Notes
+
+- create empty stack
+- split path by `/`
+  - ignore `.` path
+  - pop from stack for `..` path
+  - push to stack any other part
+
 ## [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description)
 
 [Solution](./80-remove-duplicates/80-remove-duplicates.js)
