@@ -811,3 +811,23 @@
 - first pointer goes through each symbol of text
 - second one through the template
   - template pointer is moved once the same char is found in text
+
+## [452. Min Number of Arrows](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description)
+
+[Solution](./452-balloons/452-balloons.js)
+
+### Topics
+
+> intervals
+
+### Notes
+
+- sort intervals
+- set min end equal to first interval end
+- set arrows count to 1
+- go through intervals
+  - if next interval starts after min end
+    - add arrow
+    - update min end to next interval end
+  - if next interval starts before min end
+    - update min end `minEnd = min(minEnd, interval.end)`
