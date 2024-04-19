@@ -162,6 +162,33 @@
 - for close bracket
   - check if paired open bracket on the top of the stack
 
+## [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description)
+
+[Solution](./21-merge-sorted-list/21-merge-sorted-list.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- create dummy node
+- create tail = node
+- if listA.head is empty
+  - `tail.next = listB.head`
+  - note that no need to check all other nodes from listB
+- if listB.head is empty
+  - `tail.next = listA.head`
+  - note that no need to check all other nodes from listA
+- if `listA.head.value <= listB.head.value`
+  - set `tail.next = listA.head`
+  - udpate `listA.head = listA.head.next`
+- if `listA.head.value > listB.head.value`
+  - set `tail.next = listB.head`
+  - udpate `listB.head = listB.head.next`
+- update tail on every step
+  - `tail = tail.next`
+
 ## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
 
 [Solution](./26-remove-duplicates/26-remove-duplicates.js)
