@@ -476,6 +476,25 @@
 - get `max(left, right)` for each index
 - sum all the maximums
 
+## [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description)
+
+[Solution](./141-linked-list-cycle/141-linked-list-cycle.js)
+
+### Topics
+
+> linked-list
+
+> two-pointers
+
+### Notes
+
+- use Floyd's tortoise and hare algorithm
+  - use two pointers: slow and fast
+    - slow goes one step forward at a time
+    - fast goes two step forward at a time
+  - if there is no cycle fast one will reach the end of list
+  - if there is a cycle fast pointer will catch up the slow one on the second round
+
 ## [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/description)
 
 [Solution](./150-polish-notation/150-polish-notation.js)
