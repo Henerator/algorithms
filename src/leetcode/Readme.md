@@ -521,6 +521,22 @@
 - get `max(left, right)` for each index
 - sum all the maximums
 
+## [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/description)
+
+[Solution](./138-copy-list/138-copy-list.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- copy every node and add it to the map
+  - origin_node -> cope_node
+- set links using one more loop
+  - set next using map
+  - set random using map
+
 ## [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description)
 
 [Solution](./141-linked-list-cycle/141-linked-list-cycle.js)
