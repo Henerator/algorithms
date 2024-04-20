@@ -1,5 +1,23 @@
 # Leetcode
 
+## [2. Add two numbers](https://leetcode.com/problems/add-two-numbers/description)
+
+[Solution](./2-add-two-numbers/2-add-two-numbers.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- create dummy node
+- keep 3 values to sum up
+  - rest - the remainder of the division
+  - headA value
+    - skip if headA is null
+  - headB value
+    - skip if headB is null
+
 ## [3. Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/description)
 
 [Solution](./3-longest-wt-repeating/3-longest-wt-repeating.js)
