@@ -418,6 +418,24 @@
   - move current
   - move one of max pointers
 
+## [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/description)
+
+[Solution](./92-reverse-linked-list-2/92-reverse-linked-list-2.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- create dummy node
+  - `const dummy = new ListNode(0, head)`
+- go until reach head of the list need to be reversed
+- save node before reversed list
+- reverse `(right - left + 1)` nodes
+- set `previousReversedList.next.next = current`
+- set `previousReversedList.next = previous`
+
 ## [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description)
 
 [Solution](./121-best-time/121-best-time.js)
