@@ -207,6 +207,21 @@
 - update tail on every step
   - `tail = tail.next`
 
+## [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description)
+
+[Solution](./25-reverse-grooup/25-reverse-grooup.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- use [Reverse linked list idea](#92.-Reverse-Linked-List-II)
+  - check if group to reverse exist
+  - run reverse method
+  - set previous to the tail of reversed part
+
 ## [26. Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
 
 [Solution](./26-remove-duplicates/26-remove-duplicates.js)
