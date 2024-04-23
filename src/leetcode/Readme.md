@@ -428,6 +428,23 @@
   - left one keeping place to put next item
   - right one searching for next non duplicate value
 
+## [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description)
+
+[Solution](./82-remove-duplicates/82-remove-duplicates.js)
+
+### Topics
+
+> linked-list
+
+> two-pointers
+
+### Notes
+
+- create dummy node
+- use two pointers
+  - left one keeping the node without duplicates
+  - right one searching for next non duplicate value
+
 ## [88. Merge sorted array](https://leetcode.com/problems/merge-sorted-array/description)
 
 [Solution](./88-merge-sorted-array/88-merge-sorted-array.js)
