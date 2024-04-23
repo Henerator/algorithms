@@ -398,6 +398,23 @@
 - second pointer goes to the array's start search for the place index is reachable from
 - update reachable index with second pointer value once it's founded
 
+## [61. Rotate List](https://leetcode.com/problems/rotate-list/description)
+
+[Solution](./61-rotate-list/61-rotate-list.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- count kust length
+- set `lastNode.next = head`
+- find point to break link
+  - `count - (k % count) - 1` steps from head
+  - update head with `breakPoint.next`
+  - set `breakPoint.next = null`
+
 ## [71. Simplify Path](https://leetcode.com/problems/simplify-path/description)
 
 [Solution](./71-simplify-path/71-simplify-path.js)
