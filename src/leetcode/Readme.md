@@ -166,6 +166,23 @@
       - get next left from hashMap
         - pay attention that hashMap will help to skip the same values
 
+## [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description)
+
+[Solution](./19-remove-node/19-remove-node.js)
+
+### Topics
+
+> linked-list
+
+### Notes
+
+- create dummy node
+- set 2 pointers to the dummy node
+  - move one pointer on n+1 steps forward
+  - move both pointers until the right pointer reaches the end of the list
+- remove node after lefet pointer
+  - `left.next = left.next.next`
+
 ## [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description)
 
 [Solution](./20-valid-parentheses/20-valid-parentheses.js)
