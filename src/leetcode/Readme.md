@@ -462,6 +462,28 @@
   - left one keeping the node without duplicates
   - right one searching for next non duplicate value
 
+## [86. Partition List](https://leetcode.com/problems/partition-list/description)
+
+[Solution](./86-partition-list/86-partition-list.js)
+
+### Topics
+
+> linked-list
+
+> two-pointers
+
+### Notes
+
+- create dummy node
+- find first node with value >= x
+  - save prev node
+  - save the node
+- go through the nodes
+  - keep previous node
+  - keep current node
+  - search for node with value < x
+    - move node to the place between saved nodes on pervious step
+
 ## [88. Merge sorted array](https://leetcode.com/problems/merge-sorted-array/description)
 
 [Solution](./88-merge-sorted-array/88-merge-sorted-array.js)
