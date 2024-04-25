@@ -1028,3 +1028,24 @@
     - update min end to next interval end
   - if next interval starts before min end
     - update min end `minEnd = min(minEnd, interval.end)`
+
+## [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description)
+
+[Solution](./637-average-of-levels/637-average-of-levels.js)
+
+### Topics
+
+> binary-tree
+
+> linked-list
+
+> double-linked-list
+
+> BFS
+
+### Notes
+
+- use BFS
+  - use double linked list to save every level of tree
+    - shift count of nodes from start of the list
+    - push children of each node to the end of the list
