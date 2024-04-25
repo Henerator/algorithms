@@ -6,6 +6,9 @@ class Node {
   }
 }
 
+/**
+ * Double linked list
+ */
 class Deque {
   constructor() {
     this.tail = new Node(null);

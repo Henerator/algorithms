@@ -662,6 +662,36 @@
   - if there is no cycle fast one will reach the end of list
   - if there is a cycle fast pointer will catch up the slow one on the second round
 
+## [146. LRU Cache](https://leetcode.com/problems/lru-cache/description)
+
+[Solution](./146-lru-cache/146-lru-cache.js)
+
+### Topics
+
+> linked-list
+
+> double-linked-list
+
+> hash-table
+
+### Notes
+
+- use double linked list to save history of using nodes
+  - put action
+    - remove node from the list
+    - push new one to the tail
+  - get action
+    - remove node from the list
+    - push new one to the tail
+  - least recently used item will be stored in the head of list
+- use hash map to save link key -> { value, node }
+  - put action
+    - update node
+    - update map value
+  - get action
+    - update node
+    - return map value
+
 ## [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/description)
 
 [Solution](./150-polish-notation/150-polish-notation.js)
