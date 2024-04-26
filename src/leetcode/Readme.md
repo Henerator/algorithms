@@ -784,6 +784,27 @@
 - second at next position
 - apply for 1..k indexes to handle circles
 
+## [199. BInary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/description)
+
+[Solution](./199-tree-right-view/199-tree-right-view.js)
+
+### Topics
+
+> binary-tree
+
+> linked-list
+
+> double-linked-list
+
+> BFS
+
+### Notes
+
+- use BFS
+  - use double linked list to save every level of tree
+    - shift count of nodes from start of the list
+    - push children of each node to the end of the list
+
 ## [202. Happy Number](https://leetcode.com/problems/happy-number/description)
 
 [Solution](./202-happy-number/202-happy-number.js)
