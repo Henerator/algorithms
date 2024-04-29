@@ -1050,6 +1050,26 @@
   - if next interval starts before min end
     - update min end `minEnd = min(minEnd, interval.end)`
 
+## [530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description)
+
+[Solution](./530-min-tree-dif/530-min-tree-dif.js)
+
+### Topics
+
+> binary-tree
+
+> DFS
+
+> inorder-traversal
+
+### Notes
+
+- make note that in BST left_node < node and right_node >= node
+- make note that in sorted array it's enough to check difference between neighbours
+  - e.g. [1, 2, 4, 7, 8]
+  - it makes no sense to compare `1` with others other than the `2`
+- use inorder traversal that for BST gives nodes in non-decreasing order
+
 ## [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description)
 
 [Solution](./637-average-of-levels/637-average-of-levels.js)
