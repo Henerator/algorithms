@@ -902,6 +902,23 @@
   - second one goes one by one searching for range end
 - to make it ease push Infinity to the array so you don't need to handle edge case on the end of the array
 
+## [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description)
+
+[Solution](./230-kth-in-bst/230-kth-in-bst.js)
+
+### Topics
+
+> binary-tree
+
+> DFS
+
+> inorder-traversal
+
+### Notes
+
+- make note that in BST left_node < node and right_node >= node
+- use inorder traversal that for BST gives nodes in non-decreasing order
+
 ## [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
 
 [Solution](./238-product/238-product.js)
