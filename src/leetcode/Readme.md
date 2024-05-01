@@ -524,6 +524,23 @@
 - set `previousReversedList.next.next = current`
 - set `previousReversedList.next = previous`
 
+## [105. Construct Binary Tree](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description)
+
+[Solution](./105-construct-tree/105-construct-tree.js)
+
+### Topics
+
+> binary-tree
+
+### Notes
+
+- preorder array gives next root value
+- to find subtree for left and right values
+  - search for current preorder value in inorder values
+    - pay attention that values are unique by problem description
+  - values to the left of the found value content left subtree
+  - values to the right of the found value content right subtree
+
 ## [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description)
 
 [Solution](./121-best-time/121-best-time.js)
