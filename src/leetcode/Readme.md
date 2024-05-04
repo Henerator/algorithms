@@ -886,6 +886,30 @@
   - check `i-j <=k ` condition
   - add value to the map
 
+## [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/description)
+
+[Solution](./222-count-tree-nodes/222-count-tree-nodes.js)
+
+### Topics
+
+> binary-tree
+
+> complete-binary-tree
+
+> binary-search
+
+### Notes
+
+- find depth of left nodes
+- find depth of right nodes
+- compare
+  - if `leftDepth === rightDepth`
+    - subtree is full
+    - nodes count of full tree = `2^(h) - 1`
+  - otherwise
+    - repeat for left node
+    - repeat for right node
+
 ## [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/description)
 
 [Solution](./224-basic-calc/224-basic-calc.js)
