@@ -787,6 +787,22 @@
 - use hash table to save count of each value
 - get max count
 
+## [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/description)
+
+[Solution](./173-tree-iterator/173-tree-iterator.js)
+
+### Topics
+
+> binary-tree
+
+> inorder-traversal
+
+### Notes
+
+- push all left nodes to the stack
+- pop one node
+- repeat for node.right
+
 ## [189. Rotate Array](https://leetcode.com/problems/rotate-array/description)
 
 [Solution](./189-rotate-array/189-rotate-array.js)
