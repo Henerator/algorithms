@@ -575,6 +575,24 @@
   - for [1, 2, 3, 4] `(2-1) + (3-2) + (4-3)` = `(4-1)`
 - ignore negative changes
 
+## [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description)
+
+[Solution](./124-tree-max-path-sum/124-tree-max-path-sum.js)
+
+### Topics
+
+> binary-tree
+
+> dfs
+
+### Notes
+
+- consider 3 cases
+  - take `left-root-right`
+    - update max with this case
+  - take `left-root`
+  - take `root-right`
+
 ## [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description)
 
 [Solution](./125-valid-palindrome/125-valid-palindrome.js)
